@@ -1,7 +1,7 @@
 (function() {
 
     var isSupportTouch = "ontouchstart" in window || "ontouchend" in window.document;
-    var _tapClick = 'click';
+    var _tapClick = isSupportTouch ? 'tap' : 'click';
     var _isWx = true;
     if (_isWx) {
         with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://res.wx.qq.com/open/js/jweixin-1.0.0.js'];
