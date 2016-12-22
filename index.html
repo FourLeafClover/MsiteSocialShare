@@ -1,0 +1,55 @@
+<html>
+<meta charset='utf-8' />
+<meta name='viewport' id='viewport' content='width=device-width, initial-scale=1'>
+<title>Franktest</title>
+<script src="jquery.min.js"></script>
+<script src='MsiteShare.js'></script>
+
+<body>
+    <div style='height: 800px;width: 100%;background-color: yellow'>
+        <ul>
+            <li><a href="javascript:;" id='share1'>分享1</a></li>
+            <li><a href="javascript:;" id='share2'>分享2</a></li>
+            <li><a href="javascript:;" id='share3'>分享3</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    $(function() {
+
+        if (window.MsiteShare.isWx) {
+            window.MsiteShare.setWxConfig({
+                appId: 'appId',
+                timestamp: 'timestamp',
+                nonceStr: 'nonceStr',
+                signature: 'signature'
+            });
+        }
+
+        window.MsiteShare.setShare("#share1", {
+            link: 'http://m.kjt.com/',
+            pic: 'http://image.kjt.com/mkt/Original/2016/1209/4c4f423e-097b-4f8d-9af3-ebb74af54b0c.jpg',
+            summary: 'Frank test1 summary',
+            title: 'Frank Test1 title',
+            desc: ''
+        })
+
+        window.MsiteShare.setShare("#share2", {
+            link: 'http://m.kjt.com/',
+            pic: 'http://image.kjt.com/mkt/Original/2016/1209/4c4f423e-097b-4f8d-9af3-ebb74af54b0c.jpg',
+            summary: 'Frank test2 summary',
+            title: 'Frank Test2 title',
+            desc: ''
+        })
+
+        window.MsiteShare.setShare("#share3", {
+            link: 'http://m.kjt.com/',
+            pic: 'http://image.kjt.com/mkt/Original/2016/1209/4c4f423e-097b-4f8d-9af3-ebb74af54b0c.jpg',
+            summary: 'Frank test3 summary',
+            title: 'Frank Test3 title',
+            desc: ''
+        })
+    })
+</script>
+
+</html>
